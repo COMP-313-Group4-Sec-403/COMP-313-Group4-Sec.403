@@ -8,3 +8,6 @@ frontend/dist
 
 # Logs
 *.log
+
+
+.env
