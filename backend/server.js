@@ -1,28 +1,13 @@
-import express from 'express'
-import cors from 'cors'
-import cookieParser from 'cookie-parser';
+import app from './express.js';
+import connectDB from './database/mongoose.js';
 
 
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-app.use(cookieParser());
+// Connect to MongoDB
+connectDB();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3000, () => {
+const PORT = 3000;
+app.listen(PORT, () => {
     console.log('Server is running on port 3000');
 });
